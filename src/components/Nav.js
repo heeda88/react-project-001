@@ -1,17 +1,5 @@
-// import { NavLink } from "react-router-dom";
-
-// function NavBar() {
-//   return (
-//     <nav>
-//       <div>
-//         <NavLink to="/"> Home </NavLink>
-//         <NavLink to="/about"> About </NavLink>
-//         <NavLink to="/detail"> Detail </NavLink>
-//       </div>
-//     </nav>
-//   );
-// }
-
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -19,6 +7,10 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 function NavBarHeader() {
+  const [keyword, setKeyword] = useState("");
+  const handleOnChange = (event) => {
+    setKeyword(event.target.value);
+  };
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -33,14 +25,16 @@ function NavBarHeader() {
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
           </Nav>
-          <Form className="d-flex">
+          <Form className="d-flex" method="GET" action={`/search/${keyword}`}>
             <Form.Control
               type="search"
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              value={keyword}
+              onChange={handleOnChange}
             />
-            <Button>Search</Button>
+            <Button type="submit">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

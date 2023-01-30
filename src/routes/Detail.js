@@ -1,14 +1,12 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import styled from "../css/Movies.module.css";
+import styles from "../css/Detail.module.css";
 
 function Detail() {
   const x = useParams();
   const [loading, setLoading] = useState([]);
   const [movieDetail, setMovieDetail] = useState([]);
-  console.log(x["id"]);
-  console.log(`https://yts.mx/api/v2/movie_details.json?movie_id=${x["id"]}`);
   const getMovieDetail = async () => {
     const movieResponse = await fetch(
       `https://yts.mx/api/v2/movie_details.json?movie_id=${x["id"]}`
@@ -24,11 +22,11 @@ function Detail() {
 
   function DetailContents({ movieDetail: movieDetail }) {
     return (
-      <div>
+      <div className={styles.movie}>
         <h1>
           {movieDetail["title"]} ({movieDetail["year"]})
         </h1>
-        <div className={styled.cover}>
+        <div className={styles.cover}>
           <img src={movieDetail["medium_cover_image"]} />
         </div>
         <h3>Intro</h3>
@@ -46,6 +44,11 @@ function Detail() {
 
   return (
     <div>
+      <Link to={`/home`}> Go to home</Link>
+      <br />
+      <Link to={`/about`}> Go to about</Link>
+      <br />
+      <Link to={`/detail`}> Go to detail</Link>
       {loading ? "Loading...." : <DetailContents movieDetail={movieDetail} />}
     </div>
   );

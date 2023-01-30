@@ -7,6 +7,7 @@ function Detail() {
   const x = useParams();
   const [loading, setLoading] = useState([]);
   const [movieDetail, setMovieDetail] = useState([]);
+
   const getMovieDetail = async () => {
     const movieResponse = await fetch(
       `https://yts.mx/api/v2/movie_details.json?movie_id=${x["id"]}`
@@ -15,11 +16,11 @@ function Detail() {
     setMovieDetail(movieJson["data"]["movie"]);
     setLoading(false);
   };
+
   useEffect(() => {
     getMovieDetail();
   }, []);
   console.log(movieDetail);
-
   function DetailContents({ movieDetail: movieDetail }) {
     return (
       <div className={styles.movie}>
@@ -33,6 +34,7 @@ function Detail() {
         <p> {movieDetail["description_intro"]}</p>
         <h3>Summary</h3>
         <p> {movieDetail["description_full"]}</p>
+        <h3>Genres</h3>
         <ul>
           {movieDetail["genres"].map((genre, genreId) => {
             return <li key={genreId}>{genre}</li>;
@@ -44,12 +46,8 @@ function Detail() {
 
   return (
     <div>
-      <Link to={`/home`}> Go to home</Link>
-      <br />
-      <Link to={`/about`}> Go to about</Link>
-      <br />
-      <Link to={`/detail`}> Go to detail</Link>
       {loading ? "Loading...." : <DetailContents movieDetail={movieDetail} />}
+      <p></p>
     </div>
   );
 }

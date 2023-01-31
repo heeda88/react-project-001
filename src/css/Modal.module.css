@@ -1,0 +1,22 @@
+.modalFlag{
+    position: relative;
+    z-index: 0;
+}
+
+.modalDiv{
+    position: absolute;
+    top : -10%;
+    right: -5%;
+}
+
+
+.modalBtn {
+    width: auto;
+    font-size: 8px;
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.modalBtn:hover {
+    opacity: 1.0;
+}

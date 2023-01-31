@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -40,7 +40,9 @@ function NavBarHeader() {
               value={keyword}
               onChange={handleOnChange}
             />
-            <Button type="submit">Search</Button>
+            <Button type="submit" variant="outline-secondary">
+              Search
+            </Button>
           </Form>
         </Navbar.Collapse>
       </Container>

@@ -9,7 +9,7 @@ import NavBarHeader from "./components/Nav";
 function App() {
   return (
     <div>
-      {/* <!-- only for git hub --> */}
+      {/* <!-- only for gh pages --> */}
       {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
       {/* local  */}
       <BrowserRouter>

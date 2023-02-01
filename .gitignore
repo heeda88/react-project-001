@@ -1,18 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# git
-.git
-.gitignore
-
-# package.json
-package-lock.json
-
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
 
 # testing
+/lesson
 /coverage
 
 # production

@@ -5,7 +5,7 @@ import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 function ModalMarkdown({ context }) {
   const markdownText = `
-  #### Not yet
+  #### Component.js
   \`\`\`js
   ${context}
   \`\`\`

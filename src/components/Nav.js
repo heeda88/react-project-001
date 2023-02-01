@@ -11,6 +11,9 @@ function NavBarHeader() {
   const handleOnChange = (event) => {
     setKeyword(event.target.value);
   };
+  const searchWithLink = () => {
+    setKeyword("");
+  };
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -43,6 +46,11 @@ function NavBarHeader() {
             <Button type="submit" variant="outline-secondary">
               Search
             </Button>
+            <button className="btn" type="button" onClick={searchWithLink}>
+              <Nav.Link as={Link} to={`/search/${keyword}`}>
+                S.Link
+              </Nav.Link>
+            </button>
           </Form>
         </Navbar.Collapse>
       </Container>

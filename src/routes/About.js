@@ -1,26 +1,20 @@
-import { Button, ButtonToolbar, Card, Modal } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Card } from "react-bootstrap";
 
 import styles from "../css/About.module.css";
 import modalStyles from "../css/Modal.module.css";
 
 import FormEaxmple from "../components/FormExample";
 import FormExampleReact from "../components/FormExampleReact";
-import NavScrollExampleReact from "../components/NavExampleReact";
+import NavScrollExampleReact from "../components/NavScrollExampleReact";
 import NavExample from "../components/NavExample";
 import ModalCodeBlock from "../components/ModalCodeBlock";
 import ButtonExample from "../components/ButtonExample";
 
-import ButtonExampleText from "../components/ButtonExample.js"; // Relative path to your File
+import componentsJson from "../data/componentCodeData";
 
 function About() {
-  console.log(ButtonExampleText);
-  const getMovieDetail = async () => {
-    const jsResponse = await fetch(`../components/ButtonExample.js`);
-    console.log(jsResponse);
-  };
-  getMovieDetail();
+  const context = componentsJson;
   return (
     <div className={styles.wrapper + " " + styles.modalFlag}>
       <Card className={styles.card_contents}>
@@ -59,23 +53,22 @@ function About() {
         <br></br>
         <h5>Button</h5>
         <div className={modalStyles.modalFlag}>
-          <ModalCodeBlock context={ButtonExampleText} />
+          <ModalCodeBlock context={context["ButtonExample"]} />
           <ButtonExample />
         </div>
         <br></br>
         <h5>Nav</h5>
-        <div className={modalStyles.modalFlag}>
-          <ModalCodeBlock context="" />
-          <NavExample />
-        </div>
         <br></br>
         <div className={modalStyles.modalFlag}>
-          <ModalCodeBlock context="" />
+          <ModalCodeBlock context={context["NavScrollExampleReact"]} />
           <NavScrollExampleReact />
         </div>
         <br></br>
         <h5> Form</h5>
-        <FormExampleReact />
+        <div className={modalStyles.modalFlag}>
+          <ModalCodeBlock context={context["FormExampleReact"]} />
+          <FormExampleReact />
+        </div>
       </Card>
 
       <Card className={styles.card_contents}>

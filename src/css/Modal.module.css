@@ -9,14 +9,18 @@
     right: -5%;
 }
 
-
 .modalBtn {
     width: auto;
-    font-size: 8px;
+    font-size: 1.234rem;
     z-index: 1;
     opacity: 0.1;
 }
 
 .modalBtn:hover {
     opacity: 1.0;
+}
+
+.modalContents {
+    --bs-modal-width: 40% !important;
+    font-size: 1rem;
 }

@@ -21,7 +21,7 @@ function ModalCodeBlock({ context }) {
       >
         &lt; code &gt;
       </Button>
-      <Modal show={modalShow}>
+      <Modal show={modalShow} className={modalStyles.modalContents}>
         <Modal.Header closeButton onClick={closeButton}>
           <Modal.Title>Code</Modal.Title>
         </Modal.Header>

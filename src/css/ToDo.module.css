@@ -8,9 +8,7 @@
     align-items: center;
 }
 
-form{
-    width: 100%;
-}
+
 .title{
     font-size: 24px;
 }
@@ -19,13 +17,17 @@ form{
     display: grid;
     width: 100%;
     margin-top: 1%;
+    margin-bottom: 5%;
     grid-template-columns:  1fr 6fr 1fr;
 }
 
+.todo_input_form{
+    width: 60%;
+}
 
 .todo_item{
     display: grid;
-    width: 100%;
+    width: 80%;
     margin-top: 1%;
     grid-template-columns: 1fr 6fr 1fr;
 }

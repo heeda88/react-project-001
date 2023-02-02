@@ -19,7 +19,7 @@ function ToDo() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>To Do List</div>
-      <form onSubmit={onSubmit}>
+      <form className={styles.todo_input_form} onSubmit={onSubmit}>
         <div className={styles.todo_input + " " + "form-group"}>
           <div></div>
           <input

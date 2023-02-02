@@ -33,6 +33,12 @@ function NavBarHeader() {
             <Nav.Link as={Link} to="/about">
               About
             </Nav.Link>
+            <Nav.Link as={Link} to="/grid">
+              Grid
+            </Nav.Link>
+            <Nav.Link as={Link} to="/todo">
+              ToDo
+            </Nav.Link>
           </Nav>
           <Form className="d-flex" method="GET" action={`/search/${keyword}`}>
             <Form.Control

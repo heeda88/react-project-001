@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Card } from "react-bootstrap";
 
 import styles from "../css/Detail.module.css";
 

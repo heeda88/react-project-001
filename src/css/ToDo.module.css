@@ -1,0 +1,45 @@
+.wrapper{
+    width: 1320px;
+    margin: 5% auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 100%;
+}
+.title{
+    font-size: 24px;
+}
+
+.todo_input{
+    display: grid;
+    width: 100%;
+    margin-top: 1%;
+    grid-template-columns:  1fr 6fr 1fr;
+}
+
+
+.todo_item{
+    display: grid;
+    width: 100%;
+    margin-top: 1%;
+    grid-template-columns: 1fr 6fr 1fr;
+}
+
+.todo_item_header{
+    width: 100%;
+}
+
+
+.todo_item_body{
+    width: 100%;
+
+}
+
+.todo_item_footer{
+
+}

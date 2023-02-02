@@ -1,6 +1,5 @@
 import Movie from "../components/Movies";
 import styles from "../css/Home.module.css";
-
 function HomeContents({ movies, loading }) {
   return (
     <div className={styles.container}>

@@ -22,26 +22,49 @@
 }
 
 .todo_input_form{
+    grid-gap: 10%;
     width: 60%;
 }
 
 .todo_item{
     display: grid;
-    width: 80%;
+    width: 60%;
     margin-top: 1%;
-    grid-template-columns: 1fr 6fr 1fr;
+    grid-gap: 3%;
+    grid-template-columns: 0.5fr 7.5fr 0.5fr;
 }
 
 .todo_item_header{
     width: 100%;
 }
 
+.todo_item_header:hover ~ .todo_item_body{
+    opacity: 60%;
+}
 
 .todo_item_body{
     width: 100%;
-
 }
 
 .todo_item_footer{
+    opacity: 0%;
+}
 
+.todo_item_body:hover ~ .todo_item_footer{
+    opacity: 80%;
+
+}
+
+.todo_item_footer:hover{
+    opacity: 80%;
+}
+
+
+.todos_footer{
+    display: grid;
+    width: 60%;
+    margin-top: 1%;
+    grid-gap: 3%;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
 }

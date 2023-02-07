@@ -12,9 +12,9 @@ function App() {
   return (
     <div>
       {/* <!-- only for gh pages --> */}
-      {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
-      {/* local  */}
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        {/* local  */}
+        {/* <BrowserRouter> */}
         <NavBarHeader />
         <Routes>
           <Route path="/" element={<Home />}></Route>

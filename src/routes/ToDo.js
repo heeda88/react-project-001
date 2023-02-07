@@ -4,7 +4,6 @@ import { useState } from "react";
 function ToDo() {
   const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState("");
-  const [edit, setEdit] = useState(false);
   const [scroll, setScroll] = useState(false);
   const [allCheckd, setAllChecked] = useState(false);
   const [statRadio, setStatRadio] = useState("All");
@@ -147,7 +146,6 @@ function ToDo() {
       </div>
     );
   }
-  console.log("render");
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>To Do List</div>

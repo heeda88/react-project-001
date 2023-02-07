@@ -68,3 +68,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
 }
+
+
+.todos_footer_header{
+    justify-content: center;
+    align-items: center;
+}
